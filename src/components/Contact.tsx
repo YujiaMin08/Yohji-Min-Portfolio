@@ -51,7 +51,7 @@ export const Contact = () => {
             transition={{ duration: 0.6 }}
             className="space-y-10"
           >
-            <div className="space-y-6">
+            <div className="space-y-6 md:pl-6 lg:pl-12 xl:pl-16">
               <h2 className="text-5xl font-bold leading-[1.05] text-brand-dark md:text-7xl">
                 Let&apos;s build
                 <br />

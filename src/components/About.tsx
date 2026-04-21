@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { GraduationCap, MapPin, Sparkles, BookOpen, Target } from "lucide-react";
+import { GraduationCap, MapPin } from "lucide-react";
 
 export const About = () => {
   const education = [
@@ -24,57 +24,48 @@ export const About = () => {
     }
   ];
 
-  const highlights = [
-    { icon: Sparkles, title: "AI Vision", text: "Passionate about transforming LLM capabilities into intuitive products." },
-    { icon: BookOpen, title: "Storytelling", text: "Bridging the gap between technical complexity and emotional narrative." },
-    { icon: Target, title: "Product Mindset", text: "Focused on user-centric design and data-driven decision making." },
-  ];
-
   return (
     <section id="about" className="pt-48 pb-24 px-6 bg-brand-paper min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           
           {/* Left Column: Personal Brand */}
-          <div className="space-y-16">
+          <div>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <h2 className="text-7xl font-bold text-brand-dark mb-8 leading-tight">
-                Synthesizing <span className="italic font-normal">Technology</span> & Art.
+              <h2 className="text-6xl md:text-7xl font-bold text-brand-dark mb-8 leading-[1.05]">
+                Turning ideas into{" "}
+                <span className="italic font-normal">products</span> people
+                truly need.
               </h2>
-              <div className="space-y-6 text-xl font-light text-brand-muted leading-relaxed">
+              <div className="space-y-6 text-lg md:text-xl font-light text-brand-muted leading-relaxed">
                 <p>
-                  I'm Yohji Min, a Junior at Northwestern University with a dual
-                  focus in Computer Science and Radio/Television/Film. The mix
-                  lets me approach AI product building with both technical
-                  rigor and creative empathy.
+                  I&apos;m Yohji Min, a Junior at Northwestern University
+                  studying Computer Science and Radio/Television/Film. Years
+                  spent living across China, Canada, and the United States have
+                  given me a global lens on how people, cultures, and markets
+                  actually use technology.
                 </p>
                 <p>
-                  From shipping GenUI learning canvases and desktop AI
-                  companions at Microsoft AI, to scaling video generation and
-                  data platforms at ByteDance, I like making tools that feel
-                  a little bit magic to the people who use them.
+                  Across internships in traditional media, advertising, brand
+                  consulting, software engineering, and AI product management,
+                  I&apos;ve learned to translate between very different worlds
+                  — between users and engineers, between strategy and
+                  execution, between an idea and the product that ships.
+                </p>
+                <p>
+                  My value sits in that integration of creativity, strategy,
+                  and technology. In an era where the technical barriers to
+                  building products keep falling, what matters most are
+                  original ideas, deep user insight, and the discipline to
+                  ship — and that&apos;s the kind of globally minded,
+                  technically literate, creatively grounded product manager
+                  I&apos;m becoming.
                 </p>
               </div>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {highlights.map((item, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 + i * 0.1 }}
-                  className="space-y-4 p-6 rounded-3xl bg-white border border-brand-dark/5 shadow-sm"
-                >
-                  <item.icon className="w-6 h-6 text-brand-dark" />
-                  <h4 className="font-bold text-sm uppercase tracking-widest">{item.title}</h4>
-                  <p className="text-xs text-brand-muted leading-relaxed">{item.text}</p>
-                </motion.div>
-              ))}
-            </div>
           </div>
 
           {/* Right Column: Academic Foundation */}

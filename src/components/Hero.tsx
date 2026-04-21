@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, Linkedin, Github, Instagram, FileUser, FileText } from "lucide-react";
+import { ArrowRight, Linkedin, Github, Instagram, FileUser } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
@@ -8,7 +8,6 @@ export const Hero = () => {
     { icon: Github, href: "https://github.com/YujiaMin08", label: "GitHub" },
     { icon: Instagram, href: "https://www.instagram.com/minnn0813/", label: "Instagram" },
     { icon: FileUser, href: "/resume.pdf", label: "Resume" },
-    { icon: FileText, href: "#", label: "Cover Letter" },
   ];
 
   return (

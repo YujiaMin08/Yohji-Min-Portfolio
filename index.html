@@ -40,6 +40,20 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Companion to public/404.html: if we arrived via the SPA redirect,
+      // restore the original path so BrowserRouter matches cleanly.
+      (function () {
+        var q = window.location.search;
+        if (q && q.indexOf("p=") !== -1) {
+          var params = new URLSearchParams(q);
+          var p = params.get("p");
+          if (p) {
+            window.history.replaceState(null, "", p + window.location.hash);
+          }
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

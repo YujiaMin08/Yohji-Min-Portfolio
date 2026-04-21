@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Experience } from "./components/Experience";
@@ -19,7 +19,7 @@ export default function App() {
   });
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <main className="min-h-screen bg-brand-paper selection:bg-brand-dark selection:text-white">
         {/* Progress Bar */}
@@ -46,6 +46,6 @@ export default function App() {
           <div className="absolute inset-0 bg-[radial-gradient(#0A1128_1px,transparent_1px)] [background-size:40px_40px]" />
         </div>
       </main>
-    </HashRouter>
+    </BrowserRouter>
   );
 }

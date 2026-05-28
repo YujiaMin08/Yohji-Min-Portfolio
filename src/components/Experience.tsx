@@ -174,6 +174,21 @@ type ExperienceRow = {
 
 const EXPERIENCE_ROWS: ExperienceRow[] = [
   {
+    date: "JUN 2026 - PRESENT",
+    role: "AI Product Manager",
+    company: "TikTok - Platform Responsibility",
+    link: "https://www.tiktok.com/",
+    logo: "/logos/tiktok.png",
+    location: "San José, CA",
+    preview: {
+      href: "https://www.tiktok.com/",
+      hostLine: "tiktok.com",
+      title: "TikTok",
+      body: "Global short-video platform — product work on platform responsibility, safety, and trust across the ecosystem.",
+      thumbSrc: "/logos/tiktok.png",
+    },
+  },
+  {
     date: "OCT 2025 - MAR 2026",
     role: "One Person Entrepreneur",
     company: "Microsoft AI",

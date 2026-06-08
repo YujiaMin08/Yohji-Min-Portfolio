@@ -150,7 +150,16 @@ const ExperienceItem: React.FC<ExperienceItemProps & { index: number }> = ({
           rel="noopener noreferrer"
           className="relative z-10 block h-[5.5rem] w-[5.5rem] overflow-hidden rounded-[1.75rem] border-[6px] border-brand-paper shadow-2xl md:h-28 md:w-28"
         >
-          <img src={logo} alt={logoAlt ?? company} className="h-full w-full object-cover" />
+          <img
+            src={logo}
+            alt={logoAlt ?? company}
+            className="h-full w-full object-cover"
+            onError={(e) => {
+              const el = e.target as HTMLImageElement;
+              const fallback = `https://www.google.com/s2/favicons?domain=${new URL(link).hostname}&sz=128`;
+              if (el.src !== fallback) el.src = fallback;
+            }}
+          />
         </a>
         <div className="absolute left-1/2 top-1/2 -z-0 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-dark/[0.03] blur-3xl" />
       </div>
@@ -277,6 +286,21 @@ const EXPERIENCE_ROWS: ExperienceRow[] = [
       title: "Ylab Consultancy",
       body: "Next-generation brand strategy — youth culture research, local insight, and implementation for domestic and global clients.",
       thumbSrc: "/logos/ylab.png",
+    },
+  },
+  {
+    date: "JUL 2023 - AUG 2023",
+    role: "Account Executive",
+    company: "Ogilvy",
+    link: "https://www.ogilvy.com/",
+    logo: "/logos/ogilvy.png",
+    location: "Shanghai, China",
+    preview: {
+      href: "https://www.ogilvy.com/",
+      hostLine: "ogilvy.com",
+      title: "Ogilvy",
+      body: "Global creative network — brand strategy, advertising, PR, and experience design for the world's most ambitious brands.",
+      thumbSrc: "/logos/ogilvy.png",
     },
   },
   {
